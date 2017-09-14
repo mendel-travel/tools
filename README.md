@@ -6,9 +6,9 @@ Go library to load environment properties
 Is really simple to use.
 
 
-## Examples
+### Examples
 
-### Installation
+#### Installation
 
 Clone in your go path
 
@@ -16,13 +16,13 @@ Clone in your go path
 git clone https://github.com/basset-la/tools
 ```
 
-### Importing
+#### Importing
 
 ```go
 import "github.com/basset-la/tools"
 ```
 
-### Create properties
+#### Create properties
 
 Create a folder in your project
 
@@ -44,7 +44,7 @@ app:
   appPath: /test
 ```
 
-### Create a struct to access your properties easily and define a global var
+#### Create a struct to access your properties easily and define a global var
 
 ```go
 // global var
@@ -58,10 +58,14 @@ type Properties struct {
 }
 ```
 
-### Load your props
+#### Load your props
 
 In your main func call to LoadProperties func telling the name of the properties folder and passing the struct to map the yaml
 
 ```go
 env.LoadProperties("properties", props)
 ```
+
+#### Running your project
+
+When you run your project don't forget to pass the -e parameter
