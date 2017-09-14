@@ -63,7 +63,7 @@ type Properties struct {
 In your main func call to LoadProperties func telling the name of the properties folder and passing the struct to map the yaml
 
 ```go
-env.LoadProperties("properties", props)
+env.LoadProperties("properties", &props)
 ```
 
 #### Running your project
