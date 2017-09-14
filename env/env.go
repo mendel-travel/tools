@@ -12,7 +12,7 @@ import (
 var e string
 
 func createFlagsForBuild() {
-	flag.StringVar(&e, "env", "development", "Specify environment")
+	flag.StringVar(&e, "e", "development", "Specify environment")
 	flag.Parse()
 }
 
