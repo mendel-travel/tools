@@ -22,7 +22,7 @@ func LoadProperties(f string, p interface{}) {
 
 	createFlagsForBuild()
 
-	file, err := ioutil.ReadFile(fmt.Sprintf("%s/%s.yaml", f, e))
+	file, err := ioutil.ReadFile(fmt.Sprintf("%s/%s/properties.yaml", f, e))
 
 	if err != nil {
 		panic("I can't find the env properties file. Please put the file and compile the project again!")
