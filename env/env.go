@@ -8,11 +8,11 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// e var : contains the setted environment value
-var e string
+// ENV : contains the setted environment value
+var ENV string
 
 func createFlagsForBuild() {
-	flag.StringVar(&e, "e", "development", "Specify environment")
+	flag.StringVar(&ENV, "e", "development", "Specify environment")
 	flag.Parse()
 }
 
@@ -22,7 +22,7 @@ func LoadProperties(f string, p interface{}) {
 
 	createFlagsForBuild()
 
-	file, err := ioutil.ReadFile(fmt.Sprintf("%s/%s/properties.yaml", f, e))
+	file, err := ioutil.ReadFile(fmt.Sprintf("%s/%s/properties.yaml", f, ENV))
 
 	if err != nil {
 		panic("I can't find the env properties file. Please put the file and compile the project again!")
