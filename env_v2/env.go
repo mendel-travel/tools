@@ -11,16 +11,16 @@ import (
 // e var : contains the setted environment value
 var e string
 
-func createFlagsForBuild() {
-	flag.StringVar(&e, "ENVIROMENT", "development", "Specify environment")
+func createFlagsForBuild(v string) {
+	flag.StringVar(&e, v, "development", "Specify environment")
 	flag.Parse()
 }
 
 // LoadProperties : function that receives a forlder name where the config files are located and a interface to map the file.
 // We decide to use a struct to manage de properties because is easy to access values after in the code.
-func LoadProperties(f string, p interface{}) {
+func LoadProperties(v string, f string, p interface{}) {
 
-	createFlagsForBuild()
+	createFlagsForBuild(v)
 
 	file, err := ioutil.ReadFile(fmt.Sprintf("%s/%s/properties.yaml", f, e))
 
