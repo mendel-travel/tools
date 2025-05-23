@@ -13,13 +13,13 @@ Is really simple to use.
 Clone in your go path
 
 ```
-git clone https://github.com/basset-la/tools
+git clone https://github.com/mendel-travel/tools
 ```
 
 #### Importing
 
 ```go
-import "github.com/basset-la/tools"
+import "github.com/mendel-travel/tools"
 ```
 
 #### Create properties
