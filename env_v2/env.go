@@ -13,7 +13,7 @@ import (
 func LoadProperties(v string, f string, p interface{}) {
 	env := os.Getenv(v)
 	if env == "" {
-		env = "development"
+		env = "develop"
 	}
 
 	file, err := ioutil.ReadFile(fmt.Sprintf("%s/%s/properties.yaml", f, env))
